@@ -1,8 +1,8 @@
-import { homePath, ticketsPath } from "@/paths";
-import Link from "next/link";
-import { buttonVariants } from "./ui/button";
-import { LucideKanban } from "lucide-react";
-import { ThemeSwitcher } from "./theme/theme-switcher";
+import { homePath, ticketsPath } from '@/paths';
+import Link from 'next/link';
+import { buttonVariants } from './ui/button';
+import { LucideKanban } from 'lucide-react';
+import { ThemeSwitcher } from './theme/theme-switcher';
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
       <div className="flex align-center gap-x-2">
         <Link
           href={homePath()}
-          className={buttonVariants({ variant: "ghost" })}
+          className={buttonVariants({ variant: 'ghost' })}
         >
           <LucideKanban />
           <h1 className="text-lg font-semibold">TicketBounty</h1>
@@ -20,7 +20,7 @@ const Header = () => {
         <ThemeSwitcher />
         <Link
           href={ticketsPath()}
-          className={buttonVariants({ variant: "default" })}
+          className={buttonVariants({ variant: 'default' })}
         >
           Tickets
         </Link>

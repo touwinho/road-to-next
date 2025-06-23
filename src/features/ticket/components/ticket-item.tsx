@@ -1,11 +1,11 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ticketPath } from "@/paths";
-import Link from "next/link";
-import { TICKET_ICONS } from "../constans";
-import { Ticket } from "../types";
-import { LucideSquareArrowOutUpRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import clsx from "clsx";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ticketPath } from '@/paths';
+import Link from 'next/link';
+import { TICKET_ICONS } from '../constans';
+import { Ticket } from '../types';
+import { LucideSquareArrowOutUpRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import clsx from 'clsx';
 
 type TicketItemProps = {
   ticket: Ticket;
@@ -22,9 +22,9 @@ const TicketItem = ({ ticket, isDetail }: TicketItemProps) => {
   );
   return (
     <div
-      className={clsx("w-full flex gap-x-1", {
-        "max-w-[580px]": isDetail,
-        "max-w-[420px]": !isDetail,
+      className={clsx('w-full flex gap-x-1', {
+        'max-w-[580px]': isDetail,
+        'max-w-[420px]': !isDetail,
       })}
     >
       <Card className="w-full">
@@ -36,8 +36,8 @@ const TicketItem = ({ ticket, isDetail }: TicketItemProps) => {
         </CardHeader>
         <CardContent>
           <span
-            className={clsx("whitespace-break-spaces", {
-              "line-clamp-3": !isDetail,
+            className={clsx('whitespace-break-spaces', {
+              'line-clamp-3': !isDetail,
             })}
           >
             {ticket.content}
